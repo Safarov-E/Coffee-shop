@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Header from './Main-page/header';
+import Header from './Coffee-page/header';
 
 class App extends Component {
   render() {
