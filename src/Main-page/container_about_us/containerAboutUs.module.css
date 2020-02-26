@@ -1,0 +1,48 @@
+.Rectangle {
+    background: #FFFFFF;
+}
+.About_Us {
+    font-family: Merienda;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 35px;
+    color: #000000;
+    text-align: center;
+    padding-top: 80px;
+}
+.img_fluid {
+    align-items: center;
+    display: flex;
+    width: 208px;
+    margin: auto;
+}
+.img_fluid:after {
+    content: "";
+    display: flex;
+    width: 60px;
+    height: 1px;
+    background: #000000;
+    margin-left: 25px;
+}
+.img_fluid:before {
+    content: "";
+    display: flex;
+    width: 60px;
+    height: 1px;
+    background: #000000;
+    margin-right: 25px;
+}
+.description_container {
+    width: 589px;
+    margin: auto;
+    padding-top: 40px;
+    font-family: Merienda;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #000000;
+    padding-bottom: 101px;
+}
