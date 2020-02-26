@@ -1,5 +1,4 @@
 .Mask_Group {
-    height: 495px;
     background: url('../img/paper-1074131_1920.png');
     background-repeat: no-repeat;
     background-size: 100%;
@@ -13,4 +12,37 @@
     text-align: center;
     color: #000000;
     padding-top: 80px;
+}
+.container_bestItem {
+    display: flex;
+    width: 805px;
+    margin: auto;
+    padding-bottom: 100px;
+}
+.cardBox {
+    background: rgba(255, 255, 255, 0.65);
+    border-radius: 8px;
+    margin-right: 71px;
+}
+.cardBox img {
+    padding: 22px 35px 0px 35px;
+}
+.cardBox h3 {
+    font-family: Merienda;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #000000;
+}
+.cardBox p {
+    font-family: Merienda;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: right;
+    padding-right: 20px;
+    color: #000000;
 }
