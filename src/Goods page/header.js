@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
-import classes from './header.module.css';
-import AboutOurCoffe from './About-our-coffe/AboutOurCoffe';
+import classes from './Header.module.css';
 import Group from './img/Group.png';
-import SearchOurCoffe from './Search-our-coffe/SearchOurCoffe';
+import AboutOurCoffe from './AboutOurGoods/AboutOurGoods';
+import Catalog_item from './Catalog_item/Catalog_item';
 import Footer from './footer/footer';
 
-class HeaderCoffeePage extends Component {
+class HeaderGoodsPage extends Component {
     render() {
         return (
             <>
@@ -20,16 +20,16 @@ class HeaderCoffeePage extends Component {
                             <div className={classes.For_your_pleasure}>For your pleasure</div>
                         </nav>
                         <div className={classes.element_h2}>
-                            <h2>Our Coffee</h2>
+                            <h2>For your pleasure</h2>
                         </div>
                     </div>
                 </header>
                 <AboutOurCoffe />
-                <SearchOurCoffe />
+                <Catalog_item />
                 <Footer />
             </>
         )
     }
 }
 
-export default HeaderCoffeePage;
+export default HeaderGoodsPage;

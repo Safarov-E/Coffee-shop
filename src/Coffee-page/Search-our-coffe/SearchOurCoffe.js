@@ -42,7 +42,7 @@ class SearchOurCoffe extends Component {
                     <div className={classes.header_container}>
                         <div className={classes.search_box}>
                             <p>Lookiing for</p>
-                            <input type="text" onKeyUp={this.searchText}/>
+                            <input type="text" onKeyUp={this.searchText} placeholder="start typing here..."/>
                         </div>
                         <div className={classes.button_wrapper}>
                             <p>Or filter</p>
