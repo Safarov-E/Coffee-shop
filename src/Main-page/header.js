@@ -5,21 +5,16 @@ import Group_1 from './img/Group-1.png';
 import HeaderTwo from './container_about_us/container_about_us';
 import OurBest from './container_ourBest/container_ourBest';
 import Footer from './footer/footer';
+import Links from '../Links/Links';
+import {Link} from 'react-router-dom';
 
 class Header extends Component {
     render() {
         return (
             <>
                 <div className={classes.Main_bg}>
-                    <header className={classes.header}>
-                        <nav className={classes.logo_nav}>
-                            <div className={classes.Logo}>
-                                <img src={Group} alt="logo"/>
-                                <div className={classes.Coffee_house}>Coffee house</div>
-                            </div>
-                            <div className={classes.Our_coffee}>Our coffee</div>
-                            <div className={classes.For_your_pleasure}>For your pleasure</div>
-                        </nav>
+                    <div className={classes.header}>
+                        <Links />
                         <div className={classes.element_h2}>
                             <h2>Everything You Love About Coffee</h2>
                         </div>
@@ -31,9 +26,9 @@ class Header extends Component {
                             <p className={classes.element_two}>Want to try our beans?</p>
                         </div>
                         <div className={classes.element_btn}>
-                            <button className={classes.element_button}>More</button>
+                            <Link to="/our-coffee" className={classes.element_button}>More</Link>
                         </div>
-                    </header>
+                    </div>
                 </div>
             <HeaderTwo />
             <OurBest />

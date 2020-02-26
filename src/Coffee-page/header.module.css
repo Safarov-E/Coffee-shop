@@ -1,4 +1,4 @@
-header {
+.headers {
     height: 344px;
     background: url('./img/coffee-shop-1209863_1920.png');
     background-repeat: no-repeat;
@@ -25,6 +25,8 @@ header {
     line-height: 17px;
     color: #FFFFFF;
     padding-right: 25px;
+    text-decoration: none;
+    cursor: pointer;
 }
 .Our_coffee {
     font-family: Merienda;
@@ -35,6 +37,8 @@ header {
     color: #FFFFFF;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     padding-right: 25px;
+    text-decoration: none;
+    cursor: pointer;
 }
 .For_your_pleasure {
     font-family: Merienda;
@@ -44,6 +48,8 @@ header {
     line-height: 17px;
     color: #FFFFFF;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+    cursor: pointer;
 }
 .element_h2 {
     font-family: Merienda;
