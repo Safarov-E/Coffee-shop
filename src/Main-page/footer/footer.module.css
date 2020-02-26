@@ -1,0 +1,64 @@
+.footer {
+    width: 364px;
+    margin: auto;
+}
+.Logo {
+    display: flex;
+    align-items: center
+}
+.logo_nav {
+    display: flex;
+    align-items: center;
+    padding-top: 52px;
+    padding-bottom: 30px;
+}
+.Coffee_house {
+    font-family: Merienda;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 17px;
+    color: #000000;
+    padding-right: 40px;
+    padding-left: 5px;
+}
+.Our_coffee {
+    font-family: Merienda;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 17px;
+    color: #000000;
+    padding-right: 40px;
+}
+.For_your_pleasure {
+    font-family: Merienda;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 17px;
+    color: #000000;
+}
+.img_fluid {
+    align-items: center;
+    display: flex;
+    width: 208px;
+    margin: auto;
+    padding-bottom: 20px;
+}
+.img_fluid:after {
+    content: "";
+    display: flex;
+    width: 60px;
+    height: 1px;
+    background: #000000;
+    margin-left: 25px;
+}
+.img_fluid:before {
+    content: "";
+    display: flex;
+    width: 60px;
+    height: 1px;
+    background: #000000;
+    margin-right: 25px;
+}

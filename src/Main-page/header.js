@@ -4,6 +4,7 @@ import Group from './img/Group.png';
 import Group_1 from './img/Group-1.png';
 import HeaderTwo from './container_about_us/container_about_us';
 import OurBest from './container_ourBest/container_ourBest';
+import Footer from './footer/footer';
 
 class Header extends Component {
     render() {
@@ -36,6 +37,7 @@ class Header extends Component {
                 </div>
             <HeaderTwo />
             <OurBest />
+            <Footer />
             </>
         )
     }
