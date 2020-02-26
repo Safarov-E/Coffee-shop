@@ -1,0 +1,115 @@
+.header_container {
+    display: flex;
+    padding-top: 60px;
+    width: 720px;
+    margin: auto;
+}
+.search_box {
+    display: flex;
+    align-items: center;
+}
+.search_box p{
+    font-family: Merienda;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #000000;
+    padding-right: 19px;
+}
+.search_box input{
+    background: #FFFFFF;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    font-family: Merienda;
+    border: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 17px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.5);
+    width: 180px;
+    height: 30px;
+    margin-right: 83px;
+}
+.button_wrapper {
+    display: flex;
+    align-items: center;
+}
+.button_wrapper p{
+    font-family: Merienda;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #000000;
+    margin-right: 35px;
+}
+.button_wrapper button{
+    font-family: Merienda;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 17px;
+    text-align: center;
+    border: none;
+    color: #000000;
+    padding: 7px 20px;
+    background: #FFFFFF;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 4px 0px 0px 4px;
+    margin-right: 5px;
+}
+.product_item {
+    display: flex;
+    width: 900px;
+    margin: auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.product_actions {
+    margin-right: 71px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25);
+    margin-top: 60px;
+}
+.product_actions img{
+    padding: 37px 27px 0px 27px;
+}
+.product_actions h3{
+    font-family: Merienda;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #000000;
+}
+.product_actions p{
+    width: 165px;
+    margin: auto;
+    font-family: Merienda;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: right;
+    color: #000000;
+}
+p.price{
+    width: 165px;
+    margin: auto;
+    font-family: Merienda;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: right;
+    color: #000000;
+    padding-top: 14px;
+    padding-bottom: 22px;
+}
