@@ -1,0 +1,119 @@
+.headers {
+    height: 344px;
+    background: url('../Coffee-page/img/coffee-shop-1209863_1920.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.header {
+    width: 1440px;
+    margin: auto;
+}
+.Logo {
+    display: flex;
+    align-items: center
+}
+.logo_nav {
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+}
+.Coffee_house {
+    font-family: Merienda;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 17px;
+    color: #FFFFFF;
+    padding-right: 25px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.Our_coffee {
+    font-family: Merienda;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 17px;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding-right: 25px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.For_your_pleasure {
+    font-family: Merienda;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 17px;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+    cursor: pointer;
+}
+.element_h2 {
+    font-family: Merienda;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 58px;
+    padding-top: 60px;
+    color: #FFFFFF;
+    text-align: center;
+}
+.item_card {
+    display: flex;
+    padding-top: 70px;
+    width: 865px;
+    margin: auto;
+}
+.item_card_image {
+    padding-right: 55px;
+}
+.content_theme h2{
+    font-family: Merienda;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 35px;
+    color: #000000;
+    text-align: center;
+}
+.img_fluid {
+    align-items: center;
+    display: flex;
+    width: 208px;
+    margin: auto;
+}
+.img_fluid:after {
+    content: "";
+    display: flex;
+    width: 60px;
+    height: 1px;
+    background: #000000;
+    margin-left: 25px;
+}
+.img_fluid:before {
+    content: "";
+    display: flex;
+    width: 60px;
+    height: 1px;
+    background: #000000;
+    margin-right: 25px;
+}
+.item_country, .item_description, .item_price {
+    font-family: Merienda;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+}
+.item_country span, .item_description span{
+    font-weight: normal;
+}
+.item_price span {
+    font-weight: 100;
+    font-size: 25px;
+    padding-left: 10px;
+}

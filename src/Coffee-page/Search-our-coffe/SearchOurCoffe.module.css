@@ -80,7 +80,7 @@
 .product_actions img{
     padding: 37px 27px 0px 27px;
 }
-.product_actions h3{
+.product_actions_h3{
     font-family: Merienda;
     font-style: normal;
     font-weight: normal;
@@ -88,6 +88,9 @@
     line-height: 20px;
     text-align: center;
     color: #000000;
+    text-decoration: none; 
+    display: block;
+    padding: 14px;
 }
 .product_actions p{
     width: 165px;

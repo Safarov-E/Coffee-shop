@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import classes from './SearchOurCoffe.module.css';
+import {Link} from 'react-router-dom';
 
 class SearchOurCoffe extends Component {
     state = {
@@ -59,7 +60,7 @@ class SearchOurCoffe extends Component {
                                     return (
                                         <div className={classes.product_actions} key={index}>
                                             <img src={item.url} alt="coffe" width="167px" height="115px"/>
-                                            <h3>{item.name}</h3>
+                                            <Link to={'/our-coffee/' + index} className={classes.product_actions_h3}>{item.name}</Link>
                                             <p>{item.country}</p>
                                             <p className={classes.price}>{item.price}</p>
                                         </div>
@@ -72,7 +73,7 @@ class SearchOurCoffe extends Component {
                                     return (
                                         <div className={classes.product_actions} key={index}>
                                             <img src={item.url} alt="coffe" width="167px" height="115px"/>
-                                            <h3>{item.name}</h3>
+                                            <Link to={'/our-coffee/' + index} className={classes.product_actions_h3}>{item.name}</Link>
                                             <p>{item.country}</p>
                                             <p className={classes.price}>{item.price}</p>
                                         </div>
