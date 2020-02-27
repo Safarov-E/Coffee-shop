@@ -3,6 +3,7 @@ import classes from '../AboutIt.module.css';
 import Footer from '../../Coffee-page/footer/footer';
 import Links from '../../Links/Links';
 import coffee from '../../Goods page/img/coffee-beans-(1).png';
+import Spinner from '../../spinner/spinner';
 
 class AboutIt extends Component {
     state = {
@@ -14,9 +15,6 @@ class AboutIt extends Component {
             .then((coffe) => this.setState({coffee: coffe}))
     }
     render() {
-        if(this.state.coffee === null) {
-            return <p>Loading...</p>
-        }
         return (
             <>
                 <div className={classes.headers}>
@@ -30,18 +28,24 @@ class AboutIt extends Component {
                 <div className={classes.page_item}>
                     <div className={classes.page_item_articul}>                         
                         <div className={classes.item_card}>
-                            <div className={classes.item_card_image}>
-                                <img src={this.state.coffee[5]['url']} alt="coffee" width="392px" height="355px"/>
-                            </div>
-                            <div className={classes.content_theme}>
-                                <h2>About it</h2>
-                                <div className={classes.img_fluid}>
-                                    <img src={coffee} alt="coffee"/>
+                            {
+                                this.state.coffee ? 
+                                <>
+                                <div className={classes.item_card_image}>
+                                    <img src={this.state.coffee[5]['url']} alt="coffee" width="392px" height="355px"/>
                                 </div>
-                                <p className={classes.item_country}>Country: <span>{this.state.coffee[5]['country']}</span></p>
-                                <p className={classes.item_description}>Description: <span>{this.state.coffee[5]['description']}</span></p>
-                                <p className={classes.item_price}>Price: <span> {this.state.coffee[5]['price']}</span></p>
-                            </div>
+                                <div className={classes.content_theme}>
+                                    <h2>About it</h2>
+                                    <div className={classes.img_fluid}>
+                                        <img src={coffee} alt="coffee"/>
+                                    </div>
+                                    <p className={classes.item_country}>Country: <span>{this.state.coffee[5]['country']}</span></p>
+                                    <p className={classes.item_description}>Description: <span>{this.state.coffee[5]['description']}</span></p>
+                                    <p className={classes.item_price}>Price: <span> {this.state.coffee[5]['price']}</span></p>
+                                </div>
+                                </>
+                            : <Spinner />
+                            }
                         </div> 
                     </div>
                 </div>
