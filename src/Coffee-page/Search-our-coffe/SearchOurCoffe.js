@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import classes from './SearchOurCoffe.module.css';
 import {Link} from 'react-router-dom';
+import Spinner from '../../spinner/spinner';
 
 class SearchOurCoffe extends Component {
     state = {
@@ -28,15 +29,15 @@ class SearchOurCoffe extends Component {
         })
     }
     render() {
-        if(this.state.coffe === null) {
-            return <p>Loading...</p>
+        let newCoffe, countruCoffe
+        if(this.state.coffe) {
+            newCoffe = this.state.coffe.filter((item, index) => {
+                return item.name.toLowerCase().indexOf(this.state.query) !== -1;
+            })
+            countruCoffe = this.state.coffe.filter((item, index) => {
+                return item.country.indexOf(this.state.country) !== -1;
+            })
         }
-        let newCoffe = this.state.coffe.filter((item, index) => {
-            return item.name.toLowerCase().indexOf(this.state.query) !== -1;
-        })
-        let countruCoffe = this.state.coffe.filter((item, index) => {
-            return item.country.indexOf(this.state.country) !== -1;
-        })
         return (
             <div className={classes.product_summary}>
                 <div className={classes.header_search}>
@@ -54,31 +55,35 @@ class SearchOurCoffe extends Component {
                     </div>
                     <div className={classes.product_item}>
                             {
-                                this.state.click ? 
-                                null
-                                : newCoffe.map((item, index) => {
-                                    return (
-                                        <div className={classes.product_actions} key={index}>
-                                            <img src={item.url} alt="coffe" width="167px" height="115px"/>
-                                            <Link to={'/our-coffee/' + index} className={classes.product_actions_h3}>{item.name}</Link>
-                                            <p>{item.country}</p>
-                                            <p className={classes.price}>{item.price}</p>
-                                        </div>
-                                    )
-                                })
+                                this.state.coffe ?
+                                    this.state.click ? 
+                                    null
+                                    : newCoffe.map((item, index) => {
+                                        return (
+                                            <div className={classes.product_actions} key={index}>
+                                                <img src={item.url} alt="coffe" width="167px" height="115px"/>
+                                                <Link to={'/our-coffee/' + index} className={classes.product_actions_h3}>{item.name}</Link>
+                                                <p>{item.country}</p>
+                                                <p className={classes.price}>{item.price}</p>
+                                            </div>
+                                        )
+                                    })
+                                : <Spinner />
                             }
                             {
-                                this.state.click ?
-                                countruCoffe.map((item, index) => {
-                                    return (
-                                        <div className={classes.product_actions} key={index}>
-                                            <img src={item.url} alt="coffe" width="167px" height="115px"/>
-                                            <Link to={'/our-coffee/' + index} className={classes.product_actions_h3}>{item.name}</Link>
-                                            <p>{item.country}</p>
-                                            <p className={classes.price}>{item.price}</p>
-                                        </div>
-                                    )
-                                })
+                                this.state.coffe ?
+                                    this.state.click ?
+                                    countruCoffe.map((item, index) => {
+                                        return (
+                                            <div className={classes.product_actions} key={index}>
+                                                <img src={item.url} alt="coffe" width="167px" height="115px"/>
+                                                <Link to={'/our-coffee/' + index} className={classes.product_actions_h3}>{item.name}</Link>
+                                                <p>{item.country}</p>
+                                                <p className={classes.price}>{item.price}</p>
+                                            </div>
+                                        )
+                                    })
+                                    : null
                                 : null
                             }
                     </div>

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import classes from './container_ourBest.module.css';
+import Spinner from '../../spinner/spinner';
 
 class OurBest extends Component {
     state = {
@@ -11,9 +12,6 @@ class OurBest extends Component {
             .then((jsonFile) => {this.setState({coffe: jsonFile})})
     }
     render() {
-        if(this.state.coffe === null) {
-            return <p>Loading...</p>
-        }
         return (
             <div className={classes.Mask_Group}>
                 <div className={classes.container_our_best}>
@@ -23,6 +21,7 @@ class OurBest extends Component {
                 </div>
                 <div className={classes.container_bestItem}>
                 {
+                    this.state.coffe ?
                     this.state.coffe.map((item, index) => {
                         return (
                             <div className={classes.cardBox} key={index}>
@@ -32,6 +31,7 @@ class OurBest extends Component {
                             </div>
                         )
                     })
+                    : <Spinner />
                 }
                 </div>
             </div>
