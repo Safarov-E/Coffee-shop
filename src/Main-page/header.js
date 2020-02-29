@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import classes from './Header.module.css';
-import Group from './img/Group.png';
 import Group_1 from './img/Group-1.png';
 import HeaderTwo from './container_about_us/container_about_us';
 import OurBest from './container_ourBest/container_ourBest';
@@ -15,7 +14,7 @@ class Header extends Component {
                 <div className={classes.Main_bg}>
                     <div className={classes.header}>
                         <Links />
-                        <div className={classes.element_h2}>
+                        <div className={classes.element_h2} onClick={this.gkporkgreg}>
                             <h2>Everything You Love About Coffee</h2>
                         </div>
                         <div className={classes.img_fluid}>

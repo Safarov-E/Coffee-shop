@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import classes from './Header.module.css';
-import Group from './img/Group.png';
 import AboutOurCoffe from './AboutOurGoods/AboutOurGoods';
-import Catalog_item from './Catalog_item/Catalog_item';
+import CatalogItem from './Catalog_item/Catalog_item';
 import Footer from './footer/footer';
 import Links from '../Links/Links';
 
@@ -19,7 +18,7 @@ class HeaderGoodsPage extends Component {
                     </div>
                 </div>
                 <AboutOurCoffe />
-                <Catalog_item />
+                <CatalogItem />
                 <Footer />
             </>
         )

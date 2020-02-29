@@ -117,3 +117,19 @@
     font-size: 25px;
     padding-left: 10px;
 }
+.error {
+    margin: auto;
+}
+.error img{
+    display: block;
+    margin: auto;
+    padding: 40px;
+}
+.error_value{
+    font-family: Merienda;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 35px;
+    color: #000000;
+}

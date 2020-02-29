@@ -2,18 +2,24 @@ import React, {Component} from 'react';
 import classes from './SearchOurCoffe.module.css';
 import {Link} from 'react-router-dom';
 import Spinner from '../../spinner/spinner';
+import Error from '../img/1200px-OOjs_UI_icon_error-destructive.svg.png';
 
 class SearchOurCoffe extends Component {
     state = {
         coffe: null,
         query: '',
         country: '',
-        click: false
+        click: false,
+        error: false
     }
     componentWillMount(){
         fetch('http://localhost:3001/coffee')
             .then((response) => response.json())
             .then((jsonFile) => {this.setState({coffe: jsonFile})})
+            .catch(error => {
+                this.onError(error)
+                console.error('Error', error)
+            })
     }
     searchText = (event) => {
         this.setState({
@@ -26,6 +32,11 @@ class SearchOurCoffe extends Component {
         this.setState({
             country: event.target.value,
             click: true
+        })
+    }
+    onError = (err) => {
+        this.setState({
+            error: true
         })
     }
     render() {
@@ -55,20 +66,25 @@ class SearchOurCoffe extends Component {
                     </div>
                     <div className={classes.product_item}>
                             {
-                                this.state.coffe ?
-                                    this.state.click ? 
-                                    null
-                                    : newCoffe.map((item, index) => {
-                                        return (
-                                            <div className={classes.product_actions} key={index}>
-                                                <img src={item.url} alt="coffe" width="167px" height="115px"/>
-                                                <Link to={'/our-coffee/' + index} className={classes.product_actions_h3}>{item.name}</Link>
-                                                <p>{item.country}</p>
-                                                <p className={classes.price}>{item.price}</p>
-                                            </div>
-                                        )
-                                    })
-                                : <Spinner />
+                                !this.state.error ?
+                                    this.state.coffe ?
+                                        this.state.click ? 
+                                        null
+                                        : newCoffe.map((item, index) => {
+                                            return (
+                                                <div className={classes.product_actions} key={index}>
+                                                    <img src={item.url} alt="coffe" width="167px" height="115px"/>
+                                                    <Link to={'/our-coffee/' + index} className={classes.product_actions_h3}>{item.name}</Link>
+                                                    <p>{item.country}</p>
+                                                    <p className={classes.price}>{item.price}</p>
+                                                </div>
+                                            )
+                                        })
+                                    : <Spinner />
+                                :   <div className={classes.error}>
+                                        <img src={Error} alt="error" width="200px"/>
+                                        <p className={classes.error_value}>Во время загруски данных произошла ошибка связи с сервером данных.</p>
+                                    </div>
                             }
                             {
                                 this.state.coffe ?

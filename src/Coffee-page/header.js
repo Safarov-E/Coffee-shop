@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import classes from './header.module.css';
 import AboutOurCoffe from './About-our-coffe/AboutOurCoffe';
-import Group from './img/Group.png';
 import SearchOurCoffe from './Search-our-coffe/SearchOurCoffe';
 import Footer from './footer/footer';
 import Links from '../Links/Links';
